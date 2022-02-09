@@ -109,6 +109,7 @@ void raytrace_parallelogram()
             const Vector3d ray_direction = camera_view_direction;
 
             // TODO: Check if the ray intersects with the parallelogram
+            Vector3d ray_on_xyz(ray_origin(0), ray_origin(1), ray_origin(2));
             if (true)
             {
                 // TODO: The ray hit the parallelogram, compute the exact intersection
@@ -210,11 +211,11 @@ void raytrace_shading()
     const Vector3d x_displacement(2.0 / A.cols(), 0, 0);
     const Vector3d y_displacement(0, -2.0 / A.rows(), 0);
 
-    //Sphere setup
+    // Sphere setup
     const Vector3d sphere_center(0, 0, 0);
     const double sphere_radius = 0.9;
 
-    //material params
+    // material params
     const Vector3d diffuse_color(1, 0, 1);
     const double specular_exponent = 100;
     const Vector3d specular_color(0., 0, 1);
