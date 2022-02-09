@@ -1,0 +1,8 @@
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/CMakeFiles/edit_cache.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/CMakeFiles/rebuild_cache.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/hull/CMakeFiles/convex_hull.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/hull/CMakeFiles/edit_cache.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/hull/CMakeFiles/rebuild_cache.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/inside/CMakeFiles/point_in_polygon.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/inside/CMakeFiles/edit_cache.dir
+/Users/ryanbarclay/Desktop/School/Year7/T2/CSC 305/Assignment_1/build/src/inside/CMakeFiles/rebuild_cache.dir
