@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Custom git ingore for my environment 
+.vscode
+*.DS_Store
