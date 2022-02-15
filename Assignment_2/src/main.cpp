@@ -3,7 +3,7 @@
 // V#: V00842513
 // Code was running on Mac OS V: 12.1
 // Using compiler cmake/3.22.1/bin/cmake
-// Description:
+// Description: Here is my code for assignment 2.
 
 // Ex.1: Basic Ray Tracing - 7
 /*
