@@ -21,6 +21,12 @@ Ex 0: Implement the intersection code [5pt]
 
 Fill the functions `ray_sphere_intersection` and `ray_parallelogram_intersection` with the correct intersection between the ray and the primitives.
 
+Output with sphere intersection
+![](img/sphere.png)
+
+Output with sphere and plane intersection
+![](img/sphere-plane.png)
+
 
 Ex 1: Field of View and Perspective Camera [5pt]
 ------------------------------------------
@@ -29,8 +35,15 @@ Ex 1: Field of View and Perspective Camera [5pt]
 
 The field of view of a perspective camera represents the angle formed between the camera's center and the sensor (aka the pixel grid through which rays are shot). The focal length is the distance between the camera center and the sensor and is called `f` in the figure above.
 
-1. Fill the starter code to compute the correct value of `h` (`image_y` in the code).
+1. Fill the starter code to compute the correct value of `h` (`image_y` in the code). You can use the [Law of Sines](https://en.wikipedia.org/wiki/Law_of_sines).
 2. Implement the perspective camera similarly to Assignment 1.
+
+
+Output with correct `image_x` and `image_y`
+![](img/fov-res.png)
+
+Output with correct `image_x` and `image_y` and perspective camera (remember to change `is_perspective` to `true`)
+![](img/prespective.png)
 
 
 Ex.2: Shadow Rays [10pt]
@@ -40,7 +53,14 @@ To determine if a point is in the shadow of another or not, you must cast a ray 
 
 ### Tasks
 
-1. Fill in the starter code to implement shadow rays by implementing the function `is_light_visible`.
+1. Implement the Phong shading (diffuse and specular color)
+2. Fill in the starter code to implement shadow rays by implementing the function `is_light_visible`.
+
+Output with correct shading
+![](img/phong.png)
+
+Output with shadows
+![](img/shadow.png)
 
 
 Ex.3: Reflection [10pt]
@@ -55,6 +75,9 @@ The direction of the reflected has been given in class and can be expressed as `
 
 1. Fill the starter code to implement reflected rays. Don't forget to decrease the counter to limit the maximum number of 'bounce' a ray can make.
 
+Output with reflections
+![](img/reflections.png)
+
 
 Ex.3: Perlin Noise [10pt]
 -------------------------
@@ -68,6 +91,12 @@ Implement the Perlin noise as explained in class.
 3. Get the correct grid coordinates from the point `x` and `y`
 4. Replace the linear interpolation with a cubic interpolation `(a1 - a0) * (3.0 - w * 2.0) * w * w + a0` and compare the results.
 
+
+Output with linear interpolation
+![](img/perlin-lin.png)
+
+Output with cubic interpolation
+![](img/perlin-cub.png)
 
 Starting Code
 -------------

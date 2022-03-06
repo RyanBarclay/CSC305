@@ -22,7 +22,7 @@ using namespace Eigen;
 const std::string filename("raytrace.png");
 
 //Camera settings
-const double focal_length = 5;
+const double focal_length = 10;
 const double field_of_view = 0.7854; //45 degrees
 const double image_z = 5;
 const bool is_perspective = false;
@@ -90,7 +90,7 @@ void setup_scene()
     //parallelograms
     parallelograms.emplace_back();
     parallelograms.back() << -100, 100, -100,
-        -1.2, -1.2, -1.2,
+        -1.25, 0, -1.2,
         -100, -100, 100;
 
     //Lights
@@ -196,7 +196,10 @@ double ray_sphere_intersection(const Vector3d &ray_origin, const Vector3d &ray_d
     // TODO, implement the intersection between the ray and the sphere at index index.
     //return t or -1 if no intersection
 
-    double t = 0;
+    const Vector3d sphere_center = sphere_centers[index];
+    const double sphere_radius = sphere_radii[index];
+
+    double t = -1;
 
     if (false)
     {
@@ -220,6 +223,12 @@ double ray_parallelogram_intersection(const Vector3d &ray_origin, const Vector3d
     // TODO, implement the intersection between the ray and the parallelogram at index index.
     //return t or -1 if no intersection
 
+    const Vector3d pgram_origin = parallelograms[index].col(0);
+    const Vector3d A = parallelograms[index].col(1);
+    const Vector3d B = parallelograms[index].col(2);
+    const Vector3d pgram_u = A - pgram_origin;
+    const Vector3d pgram_v = B - pgram_origin;
+
     if (false)
     {
         return -1;
@@ -229,7 +238,7 @@ double ray_parallelogram_intersection(const Vector3d &ray_origin, const Vector3d
     p = ray_origin;
     N = p.normalized();
 
-    return 0;
+    return -1;
 }
 
 //Finds the closest intersecting object returns its index
@@ -328,8 +337,8 @@ Vector4d shoot_ray(const Vector3d &ray_origin, const Vector3d &ray_direction, in
             const double x = p(0) - sphere_centers[nearest_object][0];
             const double y = p(1) - sphere_centers[nearest_object][1];
             const double z = p(2) - sphere_centers[nearest_object][2];
-            const double tu = acos(z / sphere_radii[nearest_object]) / M_PI;
-            const double tv = (M_PI + atan2(y, x)) / (2 * M_PI);
+            const double tu = acos(z / sphere_radii[nearest_object]) / 3.1415;
+            const double tv = (3.1415 + atan2(y, x)) / (2 * 3.1415);
 
             diff_color = procedural_texture(tu, tv);
         }
