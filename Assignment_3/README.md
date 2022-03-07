@@ -79,7 +79,7 @@ Output with reflections
 ![](img/reflections.png)
 
 
-Ex.3: Perlin Noise [10pt]
+Ex.4: Perlin Noise [10pt]
 -------------------------
 
 Implement the Perlin noise as explained in class.
