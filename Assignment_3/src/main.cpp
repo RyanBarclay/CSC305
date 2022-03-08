@@ -307,7 +307,7 @@ double lerp(double a0, double a1, double w)
     assert(w <= 1);
     // TODO implement linear and cubic interpolation
     // Linear
-    return (1.0 - w) * a0 + w * a1;
+    // return (1.0 - w) * a0 + w * a1;
 
     // Cubic
     return ((a1 - a0) * (3.0 - w * 2.0) * w * w + a0);
